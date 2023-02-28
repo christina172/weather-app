@@ -63,14 +63,61 @@ p {
     color: white;
 }
 
-.main {
+
+
+.content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.name-and-temp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-and-image {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    height: 50px;
+    width: auto;
+}
+
+.sun {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
-    background-color: rgb(126, 126, 126);
+    background-color: rgb(155, 155, 155);
     color: white;
     font-weight: bold;
     text-align: center;
     padding: 5px;
+}
+
+a {
+    color: white;
+}
+
+a:visited {
+    color: black;
 }

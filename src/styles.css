@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: serif;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 
 p {
     flex-grow: 1;
-    /* height: 50px; */
+    min-height: 18px;
     text-align: center;
     vertical-align: middle;
     padding: 5px 10px;
@@ -70,34 +71,140 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
-    gap: 30px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.search div {
+    display: flex;
+    gap: 8px;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input {
+    padding: 2px 4px;
+    border: black 1px solid;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: serif;
+    width: 220px;
+}
+
+input::placeholder {
+    font-size: 0.9rem;
+}
+
+button {
+    padding: 3px 18px;
+    border: black 1px solid;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: rgb(238, 238, 238);
+    color: black;
+}
+
+button:hover {
+    background-color: rgb(202, 202, 202);
+    cursor: grab;
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+}
+
+.start img {
+    width: auto;
+    height: 40vw;
+}
+
+.container,
+.error {
+    display: none;
+}
+
+.error-container {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.error-container div {
+    text-align: center;
+    font-weight: bold;
+}
+
+.error-container img {
+    width: auto;
+    height: 40vw;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: fit-content;
+    gap: 5px;
 }
 
 .name-and-temp {
     display: flex;
     justify-content: space-between;
+    font-size: clamp(2rem, 4.8vw, 3rem);
+    font-weight: bold;
+    gap: 30px;
 }
 
 .weather-and-image {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-img {
-    height: 50px;
+.main {
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+}
+
+.description {
+    font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+}
+
+.weather-and-image img {
+    height: clamp(3.3rem, 8vw, 5rem);
     width: auto;
+    margin-right: 10px;
+}
+
+.feels-like {
+    font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+    font-weight: bold;
+}
+
+.cloudiness,
+.humidity,
+.wind,
+.visibility,
+.city-time,
+.time {
+    font-size: clamp(1rem, 1.9vw, 1.2rem);
 }
 
 .sun {
     display: flex;
     justify-content: space-between;
+    font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+    font-weight: bold;
 }
 
 .button {
@@ -106,12 +213,23 @@ img {
     align-items: center;
 }
 
+.toggle {
+    margin-top: 5px;
+}
+
 .footer {
     background-color: rgb(155, 155, 155);
     color: white;
     font-weight: bold;
-    text-align: center;
     padding: 5px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.links {
+    text-align: center;
+    font-size: clamp(0.7rem, 1.8vw, 1rem);
 }
 
 a {
@@ -119,5 +237,5 @@ a {
 }
 
 a:visited {
-    color: black;
+    color: rgb(46, 46, 46);
 }
